@@ -6,11 +6,14 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "tsc && node dist/index.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "prettier": "prettier --write ."
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
+    "branch-name-lint": "^2.1.1",
     "eslint": "^7.32.0",
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
