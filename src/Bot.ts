@@ -1,8 +1,6 @@
 import { Client } from 'discord.js';
 import { Logger } from 'winston';
 import winston = require('winston');
-import Command from './command/Command';
-import PingCommand from './command/impl/PingCommand';
 
 class Bot {
   private token?: string;
@@ -10,7 +8,6 @@ class Bot {
   private owner?: string;
 
   private client: Client;
-  private commands: Command[];
   private logger: Logger;
 
   constructor() {
@@ -19,8 +16,6 @@ class Bot {
     this.owner = process.env.DISCORD_BOT_OWNER;
 
     this.client = new Client({ intents: 'GUILD_MESSAGES' });
-
-    this.commands = [new PingCommand()];
 
     this.logger = winston.createLogger({
       level: 'info',
@@ -42,7 +37,6 @@ class Bot {
 
   async start(): Promise<void> {
     await this.client.login(this.token);
-
     this.logger.info('Discord bot has logged in.');
   }
 }
