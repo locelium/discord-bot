@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "es2019",
+    "outDir": "dist",
+    "removeComments": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "inlineSourceMap": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

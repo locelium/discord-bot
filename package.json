@@ -1,0 +1,23 @@
+{
+  "name": "locelium-discord-bot",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "repository": "https://github.com/locelium/discord-bot",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "typescript": "^4.4.2"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
